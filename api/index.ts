@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.get("/", async (req: Request, res: Response) => {
+app.get("/send-email", async (req: Request, res: Response) => {
     const subject = 'Opaaaa SMTP com Node.js e TypeScript';
     const text = 'Olá! Esse é um teste de servidor SMTP usando Node.js e TypeScript!';
     const html = '<b>Olá!</b> Esse é um teste de servidor SMTP usando Node.js e TypeScript!';
