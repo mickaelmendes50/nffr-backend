@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
-import locales from './locales/br.json';
+import locales from '../locales/br.json';
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.get("/send-email", async (req: Request, res: Response) => {
+app.get("/", async (req: Request, res: Response) => {
     const subject = 'Opaaaa SMTP com Node.js e TypeScript';
     const text = 'Olá! Esse é um teste de servidor SMTP usando Node.js e TypeScript!';
     const html = '<b>Olá!</b> Esse é um teste de servidor SMTP usando Node.js e TypeScript!';
@@ -38,5 +38,5 @@ app.get("/send-email", async (req: Request, res: Response) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`${locales.data.SERVER_RUNNING} ${PORT}`));
+app.listen(3000, () => console.log(`${locales.data.SERVER_RUNNING} 3000`));
+module.exports = app;
