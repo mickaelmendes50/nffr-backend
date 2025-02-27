@@ -17,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/mickaelmendes50/nffr-backend/issues"
   },
-  "homepage": "https://github.com/mickaelmendes50/nffr-backend#readme"
+  "homepage": "https://github.com/mickaelmendes50/nffr-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
 }
