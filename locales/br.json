@@ -2,6 +2,7 @@
   "data": {
     "SERVER_RUNNING": "Servidor rodando na porta",
     "SUCCESS_SEND_EMAIL": "E-mail enviado!",
-    "ERROR_SEND_EMAIL": "Erro interno ao enviar e-mail"
+    "ERROR_SEND_EMAIL": "Erro interno ao enviar e-mail",
+    "EMAIL_SUBJECT": "Resposta Fomulário - Arquétipos"
   }
 }

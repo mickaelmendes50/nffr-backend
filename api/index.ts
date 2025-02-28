@@ -19,16 +19,13 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/send-email", async (req: Request, res: Response) => {
-    const subject = 'Opaaaa SMTP com Node.js e TypeScript';
-    const text = 'Olá! Esse é um teste de servidor SMTP usando Node.js e TypeScript!';
-    const html = '<b>Olá!</b> Esse é um teste de servidor SMTP usando Node.js e TypeScript!';
+    const html = `<b>Olá! ${req.query.name}</b> Esse é um teste de servidor SMTP usando Node.js e TypeScript!`;
 
     try {
         const info = await transporter.sendMail({
             from: `"${process.env.SMTP_USER_NAME}" <${process.env.SMTP_USER}>`,
             to: process.env.EMAIL_TO,
-            subject,
-            text,
+            subject: locales.data.EMAIL_SUBJECT,
             html
         });
 
