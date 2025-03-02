@@ -6,7 +6,9 @@ import locales from '../locales/br.json';
 dotenv.config();
 
 const app = express();
+const cors = require('cors');
 app.use(express.json());
+app.use(cors());
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -19,7 +21,8 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/send-email", async (req: Request, res: Response) => {
-    const html = `<b>Olá! ${req.query.name}</b><br/>Seus arquétipos são ${req.body.profile}!`;
+    const profiles = req.body.profile.join(', ');
+    const html = `<b>Olá! ${req.body.name}</b><br/>Seus arquétipos são: ${profiles}!`;
 
     try {
         const info = await transporter.sendMail({
