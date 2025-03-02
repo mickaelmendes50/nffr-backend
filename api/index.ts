@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 
 app.post("/send-email", async (req: Request, res: Response) => {
     const profiles = req.body.profile.join(', ');
-    const html = `<b>Olá! ${req.body.name}</b><br/>Seus arquétipos são: ${profiles}!`;
+    const html = `<b>Cliente:</b> ${req.body.name}<br/><b>Arquétipos:</b> ${profiles}!`;
 
     try {
         const info = await transporter.sendMail({
