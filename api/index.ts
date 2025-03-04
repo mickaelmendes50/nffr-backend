@@ -23,7 +23,9 @@ const transporter = nodemailer.createTransport({
 
 app.post("/send-email", async (req: Request, res: Response) => {
     const profiles = req.body.profile.map((value: number) => archetypeData.possibleResults[value]).join(', ');
-    const html = `<b>Cliente:</b> ${req.body.name}<br/><b>Arquétipos:</b> ${profiles}!<br/><br/>
+    const html = `
+        <b>Cliente:</b> ${req.body.name}<br/><b>Arquétipos:</b> ${profiles}!<br/>
+        <br/>
         <b>${archetypeData.possibleResults[req.body.profile[0]]}:</b> ${archetypeData.descriptions[req.body.profile[0]]}<br/>
         <b>${archetypeData.possibleResults[req.body.profile[1]]}:</b> ${archetypeData.descriptions[req.body.profile[1]]}<br/>
         <b>${archetypeData.possibleResults[req.body.profile[2]]}:</b> ${archetypeData.descriptions[req.body.profile[2]]}<br/>
@@ -37,6 +39,7 @@ app.post("/send-email", async (req: Request, res: Response) => {
             html
         });
 
+        console.log({ message: locales.data.SUCCESS_SEND_EMAIL, messageId: info.messageId, mailTo: process.env.EMAIL_TO });
         res.status(200).json({ message: locales.data.SUCCESS_SEND_EMAIL, messageId: info.messageId });
     } catch (error) {
         res.status(500).json({ error: locales.data.ERROR_SEND_EMAIL });
