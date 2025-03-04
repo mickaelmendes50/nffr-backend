@@ -405,19 +405,33 @@
     "O Cuidador é o arquétipo associado à compaixão, generosidade e proteção. Pessoas que se identificam com esse arquétipo valorizam o bem-estar do outro e têm um forte desejo de ajudar, acolher e cuidar. Sua comunicação transmite empatia, confiança e um senso de segurança. A imagem do cuidador precisa refletir acolhimento, apoio e proximidade.",
     "O arquétipo da Inocente representa pureza, simplicidade, otimismo e autenticidade. Pessoas que se identificam com esse arquétipo transmitem uma energia leve, confiável e positiva. Elas desejam felicidade, segurança e buscam ver o lado bom da vida, com um olhar esperançoso e um espírito livre de malícias. São guiadas por valores éticos fortes, acreditam no bem e transmitem uma aura acolhedora e inspiradora."
   ],
+  "keyphrases": [
+    "Lidere com confiança, conquiste a excelência.",
+    "Descubra novos horizontes, viva sem fronteiras.",
+    "Crie sem limites, inspire o futuro.",
+    "Faça o impossível acontecer, liberte a magia.",
+    "Vença desafios, inspire o mundo.",
+    "Viva com paixão, ame intensamente.",
+    "Quebre as regras, mude o jogo.",
+    "Busque a verdade, compartilhe sabedoria.",
+    "Simples como você, sempre ao seu lado.",
+    "Espalhe alegria, viva com leveza.",
+    "Cuide com o coração, proteja com dedicação.",
+    "Acredite no bem, espalhe esperança."
+  ],
   "keywords": [
-    "O poder é a responsabilidade de liderar com integridade.",
-    "Seja você mesmo. Vá além dos limites. Descubra o mundo.",
-    "",
-    "Transformo sonhos em realidade. Acredito no poder da visão e da intuição. Vejo além do óbvio e trago o extraordinário à tona.",
-    "",
-    "Sinta tudo intensamente.",
-    "As regras foram feitas para serem quebradas.As regras foram feitas para serem quebradas.",
-    "Conhecimento é poder.",
-    "Você é bem-vindo aqui. Somos todos iguais.",
-    "A vida é para ser vivida com leveza e diversão.",
-    "Empatia, proteção, generosidade, acolhimento, suporte, segurança.",
-    "A vida é simples e bela."
+    ["Liderança", "Poder", "Prestígio"],
+    ["Liberdade", "Aventura", "Descoberta"],
+    ["Inovação", "Imaginação", "Expressão"],
+    ["Transformação", "Mistério", "Intuição"],
+    ["Coragem", "Determinação", "Superação"],
+    ["Paixão", "Beleza", "Conexão"],
+    ["Rebeldia", "Ousadia", "Transformação"],
+    ["Conhecimento", "Inteligência", "Reflexão"],
+    ["Simplicidade", "Pertencimento", "Autenticidade"],
+    ["Alegria", "Humor", "Espontaneidade"],
+    ["Generosidade", "Proteção", "Compaixão"],
+    ["Pureza", "Otimismo", "Simplicidade"]
   ],
   "colors": [
     [

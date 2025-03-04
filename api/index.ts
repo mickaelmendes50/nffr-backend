@@ -27,8 +27,20 @@ app.post("/send-email", async (req: Request, res: Response) => {
         <b>Cliente:</b> ${req.body.name}<br/><b>Arquétipos:</b> ${profiles}!<br/>
         <br/>
         <b>${archetypeData.possibleResults[req.body.profile[0]]}:</b> ${archetypeData.descriptions[req.body.profile[0]]}<br/>
+        <b>Palavras-chave:</b> ${archetypeData.keywords[req.body.profile[0]].join(', ')}<br/>
+        <b>Mensagem-chave:</b> ${archetypeData.keyphrases[req.body.profile[0]]}<br/>
+        <b>Cores:</b> ${archetypeData.colors[req.body.profile[0]].join(', ')}<br/>
+        <br/>
         <b>${archetypeData.possibleResults[req.body.profile[1]]}:</b> ${archetypeData.descriptions[req.body.profile[1]]}<br/>
+        <b>Palavras-chave:</b> ${archetypeData.keywords[req.body.profile[1]].join(', ')}<br/>
+        <b>Mensagem-chave:</b> ${archetypeData.keyphrases[req.body.profile[1]]}<br/>
+        <b>Cores:</b> ${archetypeData.colors[req.body.profile[1]].join(', ')}<br/>
+        <br/>
         <b>${archetypeData.possibleResults[req.body.profile[2]]}:</b> ${archetypeData.descriptions[req.body.profile[2]]}<br/>
+        <b>Palavras-chave:</b> ${archetypeData.keywords[req.body.profile[2]].join(', ')}<br/>
+        <b>Mensagem-chave:</b> ${archetypeData.keyphrases[req.body.profile[2]]}<br/>
+        <b>Cores:</b> ${archetypeData.colors[req.body.profile[2]].join(', ')}<br/>
+        <br/>
     `;
 
     try {
