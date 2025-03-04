@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import locales from '../locales/br.json';
+import archetypeData from '../data/archtypeData.json'
 
 dotenv.config();
 
@@ -21,8 +22,12 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/send-email", async (req: Request, res: Response) => {
-    const profiles = req.body.profile.join(', ');
-    const html = `<b>Cliente:</b> ${req.body.name}<br/><b>Arquétipos:</b> ${profiles}!`;
+    const profiles = req.body.profile.map((value: number) => archetypeData.possibleResults[value]).join(', ');
+    const html = `<b>Cliente:</b> ${req.body.name}<br/><b>Arquétipos:</b> ${profiles}!<br/><br/>
+        <b>${archetypeData.possibleResults[req.body.profile[0]]}:</b> ${archetypeData.descriptions[req.body.profile[0]]}<br/>
+        <b>${archetypeData.possibleResults[req.body.profile[1]]}:</b> ${archetypeData.descriptions[req.body.profile[1]]}<br/>
+        <b>${archetypeData.possibleResults[req.body.profile[2]]}:</b> ${archetypeData.descriptions[req.body.profile[2]]}<br/>
+    `;
 
     try {
         const info = await transporter.sendMail({
