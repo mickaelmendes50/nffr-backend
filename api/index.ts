@@ -58,5 +58,7 @@ app.post("/send-email", async (req: Request, res: Response) => {
     }
 });
 
+app.use(express.static('static'));
+
 app.listen(3000, () => console.log(`${locales.data.SERVER_RUNNING} 3000`));
 module.exports = app;
