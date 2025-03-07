@@ -41,6 +41,7 @@ app.post("/send-email", async (req: Request, res: Response) => {
         <b>Mensagem-chave:</b> ${archetypeData.keyphrases[req.body.profile[2]]}<br/>
         <b>Cores:</b> ${archetypeData.colors[req.body.profile[2]].join(', ')}<br/>
         <br/>
+        <b>Link: ${process.env.APP_BASE_URL}/resultados?archetypes=${req.body.profile[0]}&archetypes=${req.body.profile[1]}&archetypes=${req.body.profile[2]}</b>
     `;
 
     try {
